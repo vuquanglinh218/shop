@@ -24,6 +24,7 @@
 }
 
 .header__nav-link:hover,
+.header__nav-icon-link:hover,
 .header__nav-item:hover {
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
@@ -52,4 +53,48 @@
 .header__nav-icon-link {
     color: var(--white-color);
     padding: 0px 3px;
+}
+
+.header__nav-item-label--no-pointer {
+    cursor: text;
+    color: var(--white-color)
+}
+
+.header__qr {
+    width: 180px;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    margin-top: 10px;
+    display: none;
+}
+
+.header__qr::before {
+    content: "";
+    display: block;
+    height: 25px;
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    left: 0px;
+}
+
+.header__qr-apps {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-app-img {
+    height: 16px;
+}
+
+
+.header__nav-item--has_qr:hover .header__qr {
+    display: block;
 }
